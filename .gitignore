@@ -1,0 +1,4 @@
+/.hypothesis/
+/starter/.hypothesis/
+/starter/.pytest_cache/
+/.pytest_cache/
