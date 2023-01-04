@@ -19,5 +19,6 @@ features = {
 }
 
 response = requests.post(url, json=features)
+print(response.status_code)
 print(response.text)
 
