@@ -49,7 +49,7 @@ print(f"Precision : {precision}. Recall : {recall}. FBeta : {fbeta}")
 slice_metrics_results = compute_slice_metrics(data, cat_features, model, encoder, lb)
 
 # Save to txt file
-with open('slice_output.txt', 'w') as f:
+with open('./starter/slice_output.txt', 'w') as f:
     for metrics in slice_metrics_results:
         f.write(f"Feature : {metrics['feature']}. Category : {metrics['category']}. "
                 f"Precision : {metrics['precision']}. Recall : {metrics['recall']}. FBeta : {metrics['fbeta']}\n")
