@@ -1,4 +1,5 @@
 import pandas as pd
+import os
 
 from fastapi import FastAPI
 from pydantic import BaseModel
@@ -6,10 +7,14 @@ from pydantic import BaseModel
 from starter.starter.ml.data import process_data
 from starter.starter.ml.model import inference
 
-app = FastAPI()
-import os
+# Code needed to download DVC data
+if "DYNO" in os.environ and os.path.isdir(".dvc"):
+    os.system("dvc config core.no_scm true")
+    if os.system("dvc pull") != 0:
+        exit("dvc pull failed")
+    os.system("rm -r .dvc .apt/usr/lib/dvc")
 
-print(os.getcwd())
+app = FastAPI()
 MODEL = pd.read_pickle('./starter/model/model.pkl')
 ENCODER = pd.read_pickle('./starter/model/encoder.pkl')
 CAT_FEATURES = [
