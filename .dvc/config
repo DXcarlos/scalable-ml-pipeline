@@ -1,0 +1,5 @@
+[core]
+    remote = mys3remote
+    autostage = true
+['remote "mys3remote"']
+    url = s3://dvc-bucket-clopezh
