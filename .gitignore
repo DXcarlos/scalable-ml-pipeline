@@ -2,3 +2,5 @@
 /starter/.hypothesis/
 /starter/.pytest_cache/
 /.pytest_cache/
+/starter/test/.hypothesis/
+/starter/test/.pytest_cache/
