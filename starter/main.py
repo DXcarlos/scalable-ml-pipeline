@@ -7,7 +7,9 @@ from starter.starter.ml.data import process_data
 from starter.starter.ml.model import inference
 
 app = FastAPI()
+import os
 
+print(os.getcwd())
 MODEL = pd.read_pickle('./starter/model/model.pkl')
 ENCODER = pd.read_pickle('./starter/model/encoder.pkl')
 CAT_FEATURES = [
