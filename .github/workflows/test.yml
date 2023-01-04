@@ -39,6 +39,4 @@ jobs:
 
     - name: Test with pytest
       run: |
-        pwd
-        ls -la
         pytest -vv
