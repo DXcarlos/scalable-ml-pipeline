@@ -4,12 +4,13 @@ import pickle
 
 from sklearn.model_selection import train_test_split
 
-from starter.starter.ml.data import process_data
-from starter.starter.ml.model import train_model, compute_model_metrics, inference
-from starter.starter.ml.slice_metrics import compute_slice_metrics
+from ml.data import process_data
+from ml.model import train_model, compute_model_metrics, inference
+from ml.slice_metrics import compute_slice_metrics
+
 
 # Add code to load in the data.
-data = pd.read_csv('../data/census.csv', skipinitialspace=True)
+data = pd.read_csv('./starter/data/census.csv', skipinitialspace=True)
 
 # Optional enhancement, use K-fold cross validation instead of a train-test split.
 train, test = train_test_split(data, test_size=0.20, random_state=42)
@@ -54,5 +55,5 @@ with open('slice_output.txt', 'w') as f:
                 f"Precision : {metrics['precision']}. Recall : {metrics['recall']}. FBeta : {metrics['fbeta']}\n")
 
 # Save the model and the encoder
-pickle.dump(model, open('../model/model.pkl', 'wb'))
-pickle.dump(encoder, open('../model/encoder.pkl', 'wb'))
+pickle.dump(model, open('./starter/model/model.pkl', 'wb'))
+pickle.dump(encoder, open('./starter/model/encoder.pkl', 'wb'))

@@ -9,7 +9,7 @@ from starter.starter.ml.data import process_data
 @pytest.fixture
 def data():
     """Fixture to read census data """
-    data = pd.read_csv('../data/census.csv', skipinitialspace=True)
+    data = pd.read_csv('./starter/data/census.csv', skipinitialspace=True)
     return data
 
 

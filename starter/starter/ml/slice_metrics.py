@@ -1,5 +1,5 @@
-from starter.starter.ml.data import process_data
-from starter.starter.ml.model import compute_model_metrics, inference
+from ml.data import process_data
+from ml.model import compute_model_metrics, inference
 
 
 def compute_slice_metrics(data, categorical_features, model, encoder, label) -> list:

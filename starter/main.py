@@ -8,8 +8,8 @@ from starter.starter.ml.model import inference
 
 app = FastAPI()
 
-MODEL = pd.read_pickle('./model/model.pkl')
-ENCODER = pd.read_pickle('./model/encoder.pkl')
+MODEL = pd.read_pickle('./starter/model/model.pkl')
+ENCODER = pd.read_pickle('./starter/model/encoder.pkl')
 CAT_FEATURES = [
     "workclass",
     "education",
